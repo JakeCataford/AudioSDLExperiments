@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6461FBA1A21751000C9A210 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6461FB91A21751000C9A210 /* Cocoa.framework */; };
+		C6CF6EE71A2179B6001423EB /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CF6EE61A2179B6001423EB /* SDL2.framework */; };
+		C6CF6EEA1A217D19001423EB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EE81A217D19001423EB /* App.cpp */; };
+		C6CF6EED1A217ECB001423EB /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */; };
 		C6F665961A216FEA0027B78B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6F665951A216FEA0027B78B /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C6461FB91A21751000C9A210 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C6CF6EE61A2179B6001423EB /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		C6CF6EE81A217D19001423EB /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		C6CF6EE91A217D19001423EB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
+		C6CF6EEC1A217ECB001423EB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6F665921A216FEA0027B78B /* farts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = farts; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F665951A216FEA0027B78B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6461FBA1A21751000C9A210 /* Cocoa.framework in Frameworks */,
+				C6CF6EE71A2179B6001423EB /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +53,8 @@
 		C6F665891A216FEA0027B78B = {
 			isa = PBXGroup;
 			children = (
+				C6CF6EE61A2179B6001423EB /* SDL2.framework */,
+				C6461FB91A21751000C9A210 /* Cocoa.framework */,
 				C6F665941A216FEA0027B78B /* farts */,
 				C6F665931A216FEA0027B78B /* Products */,
 			);
@@ -58,6 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				C6F665951A216FEA0027B78B /* main.cpp */,
+				C6CF6EE81A217D19001423EB /* App.cpp */,
+				C6CF6EE91A217D19001423EB /* App.h */,
+				C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */,
+				C6CF6EEC1A217ECB001423EB /* AppDelegate.h */,
 			);
 			path = farts;
 			sourceTree = "<group>";
@@ -119,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F665961A216FEA0027B78B /* main.cpp in Sources */,
+				C6CF6EEA1A217D19001423EB /* App.cpp in Sources */,
+				C6CF6EED1A217ECB001423EB /* AppDelegate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +222,10 @@
 		C6F6659A1A216FEA0027B78B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +233,10 @@
 		C6F6659B1A216FEA0027B78B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +260,7 @@
 				C6F6659B1A216FEA0027B78B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
