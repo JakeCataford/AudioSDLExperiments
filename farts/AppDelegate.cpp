@@ -14,6 +14,8 @@ AppDelegate::AppDelegate() {
 }
 
 void AppDelegate::Start() {
+	currentOsc = new Noise();
+	
 	sound_buffer = new Uint8[512];
 	sound_len= 512;
 	spec.freq = 44100;
@@ -48,13 +50,9 @@ void AppDelegate::OnMouseMove() {
 	
 }
 
-void AppDelegate::GenerateBuffer(Uint8 *buffer, int length) {
-	int i = 0;
-	double frequency = 440 + (400 * sin((double) counter * 0.1));
-	while (i < length) {
-		counter ++;
-		buffer[i] =  100 * sin(counter * 2 * M_PI / frequency);
-		i++;
+void AppDelegate::FillBufferWithOscSamples(Uint8 *buffer, int length) {
+	for(int i = 0; i < length; i++) {
+		buffer[i] = currentOsc->Next();
 	}
 	
 
@@ -63,5 +61,5 @@ void AppDelegate::GenerateBuffer(Uint8 *buffer, int length) {
 void AppDelegate::AudioCallback(void *userdata, Uint8 *stream, int len) {
 	SDL_memset(stream, 0, len);
 	AppDelegate *instance = (AppDelegate*) userdata;
-	instance->GenerateBuffer(stream, len);
+	instance->FillBufferWithOscSamples(stream, len);
 }

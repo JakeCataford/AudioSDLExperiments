@@ -14,6 +14,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "Oscillator.h"
+#include "Sin.h"
+#include "Sawtooth.h"
+#include "Triangle.h"
+#include "Noise.h"
 
 class AppDelegate {
 	SDL_AudioSpec spec; 
@@ -22,13 +27,14 @@ class AppDelegate {
 	int sound_pos = 0;
 	int counter;
 	int time;
+	Oscillator *currentOsc;
 public:
 	AppDelegate();
 	void OnMousedown();
 	void OnMouseMove();
 	void Update();
 	void Start();
-	void GenerateBuffer(Uint8 *, int);
+	void FillBufferWithOscSamples(Uint8 *, int);
 	static void AudioCallback(void*, Uint8*, int);
 };
 

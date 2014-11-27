@@ -11,6 +11,11 @@
 		C6CF6EE71A2179B6001423EB /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CF6EE61A2179B6001423EB /* SDL2.framework */; };
 		C6CF6EEA1A217D19001423EB /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EE81A217D19001423EB /* App.cpp */; };
 		C6CF6EED1A217ECB001423EB /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */; };
+		C6CF6EF21A26C795001423EB /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EF11A26C795001423EB /* Oscillator.cpp */; };
+		C6CF6EF61A26C9E4001423EB /* Sin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EF41A26C9E4001423EB /* Sin.cpp */; };
+		C6CF6EF91A26E42C001423EB /* Sawtooth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EF71A26E42C001423EB /* Sawtooth.cpp */; };
+		C6CF6EFC1A26E7CC001423EB /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EFA1A26E7CC001423EB /* Triangle.cpp */; };
+		C6CF6EFF1A26EAA2001423EB /* Noise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF6EFD1A26EAA2001423EB /* Noise.cpp */; };
 		C6F665961A216FEA0027B78B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6F665951A216FEA0027B78B /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,16 @@
 		C6CF6EE91A217D19001423EB /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		C6CF6EEC1A217ECB001423EB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6CF6EEF1A26C526001423EB /* Oscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oscillator.h; sourceTree = "<group>"; };
+		C6CF6EF11A26C795001423EB /* Oscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Oscillator.cpp; sourceTree = "<group>"; };
+		C6CF6EF41A26C9E4001423EB /* Sin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sin.cpp; sourceTree = "<group>"; };
+		C6CF6EF51A26C9E4001423EB /* Sin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sin.h; sourceTree = "<group>"; };
+		C6CF6EF71A26E42C001423EB /* Sawtooth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sawtooth.cpp; sourceTree = "<group>"; };
+		C6CF6EF81A26E42C001423EB /* Sawtooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sawtooth.h; sourceTree = "<group>"; };
+		C6CF6EFA1A26E7CC001423EB /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		C6CF6EFB1A26E7CC001423EB /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		C6CF6EFD1A26EAA2001423EB /* Noise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Noise.cpp; sourceTree = "<group>"; };
+		C6CF6EFE1A26EAA2001423EB /* Noise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Noise.h; sourceTree = "<group>"; };
 		C6F665921A216FEA0027B78B /* farts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = farts; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F665951A216FEA0027B78B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6CF6EF31A26C97F001423EB /* Oscillators */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF6EF41A26C9E4001423EB /* Sin.cpp */,
+				C6CF6EF51A26C9E4001423EB /* Sin.h */,
+				C6CF6EF71A26E42C001423EB /* Sawtooth.cpp */,
+				C6CF6EF81A26E42C001423EB /* Sawtooth.h */,
+				C6CF6EFA1A26E7CC001423EB /* Triangle.cpp */,
+				C6CF6EFB1A26E7CC001423EB /* Triangle.h */,
+				C6CF6EFD1A26EAA2001423EB /* Noise.cpp */,
+				C6CF6EFE1A26EAA2001423EB /* Noise.h */,
+			);
+			name = Oscillators;
+			sourceTree = "<group>";
+		};
 		C6F665891A216FEA0027B78B = {
 			isa = PBXGroup;
 			children = (
@@ -71,11 +101,14 @@
 		C6F665941A216FEA0027B78B /* farts */ = {
 			isa = PBXGroup;
 			children = (
+				C6CF6EF31A26C97F001423EB /* Oscillators */,
 				C6F665951A216FEA0027B78B /* main.cpp */,
 				C6CF6EE81A217D19001423EB /* App.cpp */,
 				C6CF6EE91A217D19001423EB /* App.h */,
 				C6CF6EEB1A217ECB001423EB /* AppDelegate.cpp */,
 				C6CF6EEC1A217ECB001423EB /* AppDelegate.h */,
+				C6CF6EEF1A26C526001423EB /* Oscillator.h */,
+				C6CF6EF11A26C795001423EB /* Oscillator.cpp */,
 			);
 			path = farts;
 			sourceTree = "<group>";
@@ -136,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CF6EFF1A26EAA2001423EB /* Noise.cpp in Sources */,
+				C6CF6EF91A26E42C001423EB /* Sawtooth.cpp in Sources */,
 				C6F665961A216FEA0027B78B /* main.cpp in Sources */,
 				C6CF6EEA1A217D19001423EB /* App.cpp in Sources */,
+				C6CF6EFC1A26E7CC001423EB /* Triangle.cpp in Sources */,
 				C6CF6EED1A217ECB001423EB /* AppDelegate.cpp in Sources */,
+				C6CF6EF61A26C9E4001423EB /* Sin.cpp in Sources */,
+				C6CF6EF21A26C795001423EB /* Oscillator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
